@@ -68,12 +68,12 @@ def start(update, context):
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
+𝒲𝑒𝓁𝒸𝑜𝓂𝑒 ℬ𝒶𝒸𝓀 ℳ𝓇.𝒮𝓅𝒾𝒹𝓎
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('This is a private bot', context.bot, update.message, reply_markup)
+        sendMarkup('This is a private bot ⚠️', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
@@ -249,7 +249,7 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("Restarted successfully!", chat_id, msg_id)
+        bot.edit_message_text("🇷‌🇪‌🇸‌🇹‌🇦‌🇷‌🇹‌ 🇸‌🇺‌🇨‌🇨‌🇪‌🇸‌🇸‌🇫‌🇺‌🇱‌🇱‌🇾‌!!!", chat_id, msg_id)
         osremove(".restartmsg")
     elif AUTHORIZED_CHATS:
         try:
