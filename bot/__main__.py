@@ -249,13 +249,13 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("🇷‌🇪‌🇸‌🇹‌🇦‌🇷‌🇹‌ 🇸‌🇺‌🇨‌🇨‌🇪‌🇸‌🇸‌🇫‌🇺‌🇱‌🇱‌🇾‌!!!", chat_id, msg_id)
+        bot.edit_message_text("𝘙𝘦𝘴𝘵𝘢𝘳𝘵 𝘚𝘶𝘤𝘤𝘦𝘴𝘴𝘧𝘶𝘭𝘭𝘺", chat_id, msg_id)
         osremove(".restartmsg")
     elif AUTHORIZED_CHATS:
         try:
             for i in AUTHORIZED_CHATS:
                 if str(i).startswith('-'):
-                    bot.sendMessage(chat_id=i, text="<b>Bot Started!</b>", parse_mode=ParseMode.HTML)
+                    bot.sendMessage(chat_id=i, text="<b>♥𝐈'𝐦 𝐎𝐧𝐥𝐢𝐧𝐞 𝐀𝐠𝐚𝐢𝐧!!!♥</b>", parse_mode=ParseMode.HTML)
         except Exception as e:
             LOGGER.warning(e)
 
